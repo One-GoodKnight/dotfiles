@@ -1,0 +1,18 @@
+format = """
+$directory\
+$git_branch\
+$character"""
+
+right_format = """
+$python"""
+
+[character]
+success_symbol = '[ ](bold 172)'
+error_symbol = '[ ](bold red)'
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+
+[python]
+format = '[${symbol}(\($virtualenv\))]($style)'
+symbol = " "
