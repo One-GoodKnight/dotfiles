@@ -1,4 +1,5 @@
-line-length = 88
+line-length = 79
+preview = true
 
 [lint]
-select = ["E501"]
+select = ["E"]

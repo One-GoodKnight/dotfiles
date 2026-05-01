@@ -7,6 +7,7 @@ alias py='python3'
 
 alias gcl='git clone'
 alias gst='git status'
+alias ga='git add'
 alias gc='git commit -m'
 alias gp='git push'
 
