@@ -1,3 +1,5 @@
+export PATH=~/.local/bin:$PATH
+
 # Aliases
 alias cc='clang'
 
@@ -43,6 +45,8 @@ zinit light junegunn/fzf
 # tab selection
 zinit light Aloxaf/fzf-tab
 
+PATH="${PATH:+${PATH}:}$HOME/.local/share/zinit/plugins/junegunn---fzf/bin"
+
 # autosuggestions (suggest commands as you type)
 zinit light zsh-users/zsh-autosuggestions
 
@@ -50,3 +54,12 @@ zinit light zsh-users/zsh-autosuggestions
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
+# --- NVIM ---
+alias nvim="$HOME/.local/nvim/bin/nvim"
+update-nvim() {
+    rm -rf ~/.local/nvim
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+    tar -xzf nvim-linux-x86_64.tar.gz
+    mv nvim-linux-x86_64 ~/.local/nvim
+    rm nvim-linux-x86_64.tar.gz
+}
