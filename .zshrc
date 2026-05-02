@@ -24,6 +24,9 @@ bindkey "^[[1;5D" backward-word  # Ctrl + ←
 bindkey "^H" backward-kill-word  # Ctrl + Backspace
 bindkey "^[[3;5~" kill-word       # Ctrl + Delete
 
+# Don't delete whole word on esc release + del
+bindkey '\e\177' backward-delete-char
+
 # ---- ZINIT INIT ----
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
 source "$ZINIT_HOME/zinit.zsh"
