@@ -55,7 +55,12 @@ export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
 # --- NVIM ---
-alias nvim="$HOME/.local/nvim/bin/nvim"
+if [ -x "$HOME/.local/nvim/bin/nvim" ]; then
+  alias nvim="$HOME/.local/nvim/bin/nvim"
+else
+  alias nvim="/usr/bin/nvim"
+fi
+
 update-nvim() {
     rm -rf ~/.local/nvim
     curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
