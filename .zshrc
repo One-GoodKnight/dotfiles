@@ -71,3 +71,5 @@ update-nvim() {
     mv nvim-linux-x86_64 ~/.local/nvim
     rm nvim-linux-x86_64.tar.gz
 }
+
+export MANPAGER='nvim +Man!'
