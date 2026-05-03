@@ -27,31 +27,39 @@ bindkey "^[[3;5~" kill-word       # Ctrl + Delete
 # Don't delete whole word on esc release + del
 bindkey '\e\177' backward-delete-char
 
-# ---- ZINIT INIT ----
-ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
-source "$ZINIT_HOME/zinit.zsh"
-
 # Better completion matcher
 zstyle ':completion:*' matcher-list \
     'm:{[:lower:]}={[:upper:]}' \
     '+r:|[._-]=* r:|=*' \
     '+l:|=*'
 
-autoload -U compinit
-compinit
+# ---- ZINIT INIT ----
+ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
+source "$ZINIT_HOME/zinit.zsh"
 
 # ---- PLUGINS ----
 
-# core fuzzy engine
-zinit light junegunn/fzf
+# defer zsh scripts
+zinit light romkatv/zsh-defer
 
-# tab selection
-zinit light Aloxaf/fzf-tab
+_deferred_init() {
+	# Initialize completion system
+	autoload -U compinit
+	compinit -C
+
+	# core fuzzy engine
+	zinit light junegunn/fzf
+
+	# Tab completion with fzf
+	zinit light Aloxaf/fzf-tab
+
+	# Auto suggestions when typing
+	zinit light zsh-users/zsh-autosuggestions
+}
+
+zsh-defer _deferred_init
 
 PATH="${PATH:+${PATH}:}$HOME/.local/share/zinit/plugins/junegunn---fzf/bin"
-
-# autosuggestions (suggest commands as you type)
-zinit light zsh-users/zsh-autosuggestions
 
 # ---- STARSHIP ----
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
