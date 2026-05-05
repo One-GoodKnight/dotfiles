@@ -1,6 +1,5 @@
 -- Installation
 vim.pack.add({"https://github.com/rebelot/kanagawa.nvim"})
-vim.cmd("packadd " .. "kanagawa.nvim")
 
 -- Config
 require('kanagawa').setup({

@@ -3,8 +3,6 @@ vim.pack.add({
 	"https://www.github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim"
 })
-vim.cmd("packadd " .. "nvim-lspconfig")
-vim.cmd("packadd " .. "mason.nvim")
 
 -- Config
 

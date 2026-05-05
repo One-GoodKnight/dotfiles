@@ -3,7 +3,6 @@ vim.g.loaded_netrwPlugin = 1
 
 -- Installation
 vim.pack.add({"https://github.com/nvim-tree/nvim-tree.lua"})
-vim.cmd("packadd " .. "nvim-tree.lua")
 
 -- Config
 require("nvim-tree", dsfas).setup({

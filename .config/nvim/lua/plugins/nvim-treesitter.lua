@@ -6,7 +6,6 @@ vim.pack.add({
 		build = ":TSUpdate",
 	},
 })
-vim.cmd("packadd " .. "nvim-treesitter")
 
 -- Config
 local setup_treesitter = function()
