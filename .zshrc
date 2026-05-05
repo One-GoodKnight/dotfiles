@@ -1,5 +1,6 @@
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/.local/share/junest/bin/:$PATH"
 
 # Options
 
@@ -87,4 +88,4 @@ update-nvim() {
     rm nvim-linux-x86_64.tar.gz
 }
 
-export MANPAGER='nvim +Man!'
+export MANPAGER="$HOME/.local/nvim/bin/nvim +Man!"
