@@ -11,7 +11,10 @@ cmp.setup({
     ['<C-n>'] = { 'show', 'select_next', 'fallback' },
     ['<Escape>'] = { 'hide', 'fallback' },
   },
-  completion = { documentation = { auto_show = false } },
+  completion = {
+    menu = { auto_show = false },
+    documentation = { auto_show = false },
+  },
   sources = { default = { 'lsp', 'path', 'snippets', 'buffer' } },
   fuzzy = { implementation = "prefer_rust" }
 })
