@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "42-header.nvim": {
+      "rev": "213eed395eebe317700800daf26f476a8c94989c",
+      "src": "https://github.com/Diogo-ss/42-header.nvim"
+    },
     "blink.cmp": {
       "rev": "d3874d2a13aa19b095bdd10d37a82a8f0aa7cad3",
       "src": "https://github.com/saghen/blink.cmp"
