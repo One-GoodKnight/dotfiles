@@ -11,6 +11,7 @@ setopt PUSHD_IGNORE_DUPS
 # Aliases
 alias cc='clang'
 alias ccc='cc -Wall -Wextra -Werror'
+alias norm='norminette'
 
 alias nv='nvim'
 
