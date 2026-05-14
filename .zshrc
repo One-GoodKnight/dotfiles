@@ -10,6 +10,7 @@ setopt PUSHD_IGNORE_DUPS
 
 # Aliases
 alias cc='clang'
+alias ccc='cc -Wall -Wextra -Werror'
 
 alias nv='nvim'
 
@@ -23,6 +24,8 @@ alias gp='git push'
 
 alias ls='ls --color=auto'
 alias tree='tree -C'
+
+alias steam='firejail steam'
 
 # Word navigation (Ctrl + arrow keys)
 bindkey "^[[1;5C" forward-word   # Ctrl + →
@@ -76,8 +79,10 @@ eval "$(starship init zsh)"
 # --- NVIM ---
 if [ -x "$HOME/.local/nvim/bin/nvim" ]; then
   alias nvim="$HOME/.local/nvim/bin/nvim"
+  export MANPAGER="$HOME/.local/nvim/bin/nvim +Man!"
 else
   alias nvim="/usr/bin/nvim"
+  export MANPAGER="/usr/bin/nvim +Man!"
 fi
 
 update-nvim() {
@@ -87,5 +92,3 @@ update-nvim() {
     mv nvim-linux-x86_64 ~/.local/nvim
     rm nvim-linux-x86_64.tar.gz
 }
-
-export MANPAGER="$HOME/.local/nvim/bin/nvim +Man!"
