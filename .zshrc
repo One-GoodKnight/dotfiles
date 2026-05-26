@@ -26,6 +26,8 @@ alias gp='git push'
 alias ls='ls --color=auto'
 alias tree='tree -C'
 
+alias copy='xclip -selection clipboard'
+
 alias steam='firejail steam'
 
 # Word navigation (Ctrl + arrow keys)
