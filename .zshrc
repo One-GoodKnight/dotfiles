@@ -45,6 +45,11 @@ zstyle ':completion:*' matcher-list \
     '+r:|[._-]=* r:|=*' \
     '+l:|=*'
 
+screenshot() {
+  mkdir -p ~/Pictures/Screenshots
+  grimblast save area ~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%M-%S).png
+}
+
 # ---- ZINIT INIT ----
 ZINIT_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/zinit.git"
 source "$ZINIT_HOME/zinit.zsh"
