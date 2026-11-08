@@ -60,6 +60,9 @@ vim.lsp.enable('basedpyright')
 -- ruff
 vim.lsp.enable('ruff')
 
-
 -- clangd
 vim.lsp.enable('clangd')
+
+-- slang
+vim.lsp.enable('slangd')
+vim.filetype.add({ extension = { slangh = "shaderslang" } })

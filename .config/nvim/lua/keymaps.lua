@@ -29,6 +29,9 @@ keymap.set("n", "J", "mzJ`z", { desc = "Join lines and keep cursor position" })
 
 keymap.set({"n", "v"}, "z", "zz", { desc = "Centers screen (overrides some other keybinds)" })
 
+vim.keymap.set('n', '<leader>i', '<cmd>t.<CR>', { desc = 'Duplicate line, keep column' })
+vim.keymap.set('n', '<leader>I', '<cmd>t-<CR>', { desc = 'Duplicate line above, keep column' })
+
 keymap.set('n', '<Esc>', function()
   for _, win in ipairs(vim.api.nvim_list_wins()) do
     if vim.api.nvim_win_get_config(win).relative ~= '' then

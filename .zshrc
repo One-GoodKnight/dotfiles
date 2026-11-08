@@ -28,7 +28,7 @@ alias tree='tree -C'
 
 alias copy='xclip -selection clipboard'
 
-alias steam='firejail steam'
+alias steam='steam'
 
 # Word navigation (Ctrl + arrow keys)
 bindkey "^[[1;5C" forward-word   # Ctrl + →
