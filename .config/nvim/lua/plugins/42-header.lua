@@ -1,5 +1,5 @@
 -- Installation
-vim.pack.add({"https://github.com/Diogo-ss/42-header.nvim"})
+vim.pack.add({ "https://github.com/Diogo-ss/42-header.nvim" })
 
 -- Config
 require("42header").setup({

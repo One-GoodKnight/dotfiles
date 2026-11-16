@@ -1,5 +1,5 @@
 -- Installation
-vim.pack.add({"https://github.com/ibhagwan/fzf-lua"})
+vim.pack.add({ "https://github.com/ibhagwan/fzf-lua" })
 
 -- Config
 require("fzf-lua").setup({})

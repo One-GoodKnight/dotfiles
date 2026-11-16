@@ -1,8 +1,7 @@
 -- Installation
-vim.pack.add({"https://github.com/nvim-mini/mini.nvim"})
+vim.pack.add({ "https://github.com/nvim-mini/mini.nvim" })
 
 -- Config
-
 
 -- ai text objects
 local MiniAi = require("mini.ai")
