@@ -31,6 +31,7 @@ alias copy='xclip -selection clipboard'
 
 # Get latest file in ./
 lf() { find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2- }
+mpvl() { mpv "$(lf)" "$@" }
 
 gd() { git diff main | $EDITOR }
 
