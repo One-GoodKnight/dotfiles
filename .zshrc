@@ -1,6 +1,7 @@
 export PATH=~/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/share/junest/bin/:$PATH"
+export EDITOR=nvim
 
 # Options
 
@@ -30,6 +31,8 @@ alias copy='xclip -selection clipboard'
 
 # Get latest file in ./
 lf() { find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2- }
+
+gd() { git diff main | $EDITOR }
 
 alias steam='steam'
 
