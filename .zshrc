@@ -28,6 +28,9 @@ alias tree='tree -C'
 
 alias copy='xclip -selection clipboard'
 
+# Get latest file in ./
+lf() { find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2- }
+
 alias steam='steam'
 
 # Word navigation (Ctrl + arrow keys)
