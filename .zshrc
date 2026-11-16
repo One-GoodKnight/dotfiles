@@ -34,8 +34,6 @@ lf() { find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -d' ' -f2- }
 
 gd() { git diff main | $EDITOR }
 
-alias steam='steam'
-
 # Word navigation (Ctrl + arrow keys)
 bindkey "^[[1;5C" forward-word   # Ctrl + →
 bindkey "^[[1;5D" backward-word  # Ctrl + ←
